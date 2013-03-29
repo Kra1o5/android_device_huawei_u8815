@@ -80,6 +80,8 @@ WIFI_DRIVER_FW_PATH_STA := "/system/etc/fw_4330_b2.bin"
 WIFI_DRIVER_FW_PATH_AP := "/system/etc/fw_4330_b2.bin"
 WIFI_DRIVER_FW_PATH_P2P := "/system/etc/fw_4330_b2.bin"
 
+BOARD_LEGACY_NL80211_STA_EVENTS  := true
+
 # Audio
 TARGET_PROVIDES_LIBAUDIO := true
 
@@ -109,11 +111,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8815
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Web Rendering
-WITH_JIT := true
-ENABLE_JSC_JIT := true
 ENABLE_WEBGL := true
-HTTP := chrome
-JS_ENGINE := v8
 TARGET_FORCE_CPU_UPLOAD := true
 
 # Recovery

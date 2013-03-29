@@ -76,7 +76,6 @@ PRODUCT_PACKAGES += \
     libgenlock \
     setbtmac \
     setwifimac \
-    LegacyCamera \
     dexpreopt \
     make_ext4fs \
     setup_fs \
