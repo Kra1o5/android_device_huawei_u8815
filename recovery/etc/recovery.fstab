@@ -8,7 +8,5 @@
 /system			ext4		/dev/block/mmcblk0p12
 /emmc			vfat		/dev/block/mmcblk0p19
 /sdcard			vfat		/dev/block/mmcblk1p1		/dev/block/mmcblk1
-/p5				emmc		/dev/block/mmcblk0p5
-/p10			emmc		/dev/block/mmcblk0p10
-/p11			emmc		/dev/block/mmcblk0p11
 
+/sd-ext		    auto		/dev/block/mmcblk1p2

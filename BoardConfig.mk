@@ -42,7 +42,6 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 # Kernel 
 TARGET_KERNEL_SOURCE := kernel/huawei/u8815
 TARGET_KERNEL_CONFIG := cyanogen_u8815_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 TARGET_BOOTLOADER_BOARD_NAME := u8815
 BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
@@ -103,7 +102,7 @@ BOARD_BLUEDROID_VENDOR_CONF := device/huawei/u8815/bluetooth/vnd_u8815.txt
 # Camera
 USE_CAMERA_STUB := false
 BOARD_NEEDS_MEMORYHEAPPMEM := true
-COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB
+COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DQCOM_HUAWEI_HARDWARE
 
 # GPS
 BOARD_USES_QCOM_GPS := true
@@ -120,6 +119,7 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8815/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8815/recovery/recovery-keys.c
 TARGET_RECOVERY_INITRC := device/huawei/u8815/recovery/etc/init.rc
 TARGET_RECOVERY_FSTAB := device/huawei/u8815/recovery/etc/recovery.fstab
+BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 TARGET_USERIMAGES_USE_EXT4 := true
 

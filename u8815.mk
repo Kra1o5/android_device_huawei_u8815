@@ -79,8 +79,9 @@ PRODUCT_PACKAGES += \
     dexpreopt \
     make_ext4fs \
     setup_fs \
+    LegacyCamera \
     Torch \
-    com.android.future.usb.accessory 
+    com.android.future.usb.accessory
 
 PRODUCT_COPY_FILES += \
     device/huawei/u8815/ramdisk/init.huawei.rc:root/init.huawei.rc \
