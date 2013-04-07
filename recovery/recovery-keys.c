@@ -23,12 +23,15 @@ int device_handle_key(int key_code, int visible) {
             case KEY_MENU:
             case KEY_VOLUMEDOWN:
                 return HIGHLIGHT_DOWN;
+                    
+            case KEY_VOLUMEUP:
+                return HIGHLIGHT_UP;
 
             case KEY_HOME:
             case KEY_POWER:
                 return SELECT_ITEM;
                 
-            case KEY_VOLUMEUP:
+            case KEY_330:
             case KEY_BACK:
                 if (!ui_root_menu) {
                     return GO_BACK;
