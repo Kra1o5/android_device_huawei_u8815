@@ -128,8 +128,6 @@ on boot
 on fs
     # mount mmc partitions
     mount_all /fstab.u8815
-
-    start libcm_link
     
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -177,11 +175,6 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/mmc
     class main
     user root
     disabled
-
-service libcm_link /system/bin/sh /system/etc/libcm.sh
-    user root
-    disabled
-    oneshot
 
 on property:wlan.driver.status=loading
     start setwifimac

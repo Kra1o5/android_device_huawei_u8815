@@ -102,7 +102,6 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8815/prebuilt/system/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/huawei/u8815/prebuilt/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/huawei/u8815/prebuilt/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    device/huawei/u8815/prebuilt/system/etc/libcm.sh:system/etc/libcm.sh \
     device/huawei/u8815/prebuilt/system/etc/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
