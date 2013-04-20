@@ -31,6 +31,7 @@ int device_handle_key(int key_code, int visible) {
             case KEY_POWER:
                 return SELECT_ITEM;
             
+            case 330:
             case KEY_BACK:
                 if (!ui_root_menu) {
                     return GO_BACK;
