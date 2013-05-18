@@ -1448,8 +1448,13 @@ status_t AudioHardware::setFmVolume(float v)
 
 status_t AudioHardware::setMasterVolume(float v)
 {
+	
+    // Added 0.4 to current volume, as in voice call Mute cannot be set as minimum volume(0.00)
+    // setting Rx volume level as 2 for minimum and 7 as max level.
+    v = 0.4 + v;
+	
     Mutex::Autolock lock(mLock);
-    int vol = ceil(v * 7.0);
+    int vol = ceil(v * 5.0);
     ALOGI("Set master volume to %d.\n", vol);
     set_volume_rpc(SND_DEVICE_HANDSET, SND_METHOD_VOICE, vol, m7xsnddriverfd);
     set_volume_rpc(SND_DEVICE_SPEAKER, SND_METHOD_VOICE, vol, m7xsnddriverfd);
