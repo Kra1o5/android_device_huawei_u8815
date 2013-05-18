@@ -17,3 +17,6 @@
 add_lunch_combo u8815-userdebug
 add_lunch_combo u8815-eng
 add_lunch_combo cm_u8815-userdebug
+
+# Run device patches on the tree. I'm lazy and this is easy for nightly builds.
+sh device/huawei/u8815/patches/apply.sh
