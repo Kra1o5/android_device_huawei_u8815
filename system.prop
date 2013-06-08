@@ -53,7 +53,6 @@ sys.mem.max_hidden_apps=10
 
 # Qualcomm
 com.qc.hardware=true
-dev.pm.dyn_sample_period=700000
 dev.pm.dyn_samplingrate=1
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 

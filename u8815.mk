@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a \
     libtilerenderer
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm7x27a
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
