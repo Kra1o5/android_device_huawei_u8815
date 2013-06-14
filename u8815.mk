@@ -38,6 +38,8 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libmm-omxcore \
     libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
     libI420colorconvert
 
 # Graphics
@@ -45,11 +47,10 @@ PRODUCT_PACKAGES += \
     copybit.msm7x27a \
     gralloc.msm7x27a \
     hwcomposer.msm7x27a \
+    libmemalloc \
+    liboverlay \
+    libqdutils \
     libtilerenderer
-
-# Power
-PRODUCT_PACKAGES += \
-    power.msm7x27a
 
 # Audio
 PRODUCT_PACKAGES += \

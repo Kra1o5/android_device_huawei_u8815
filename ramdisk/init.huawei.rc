@@ -39,6 +39,7 @@ on init
     symlink /storage/sdcard0 /HWUserData
 
 on boot
+    start gpu_dcvsd
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -107,33 +108,6 @@ on boot
     chown system system /sys/devices/platform/msm_hsusb/gadget/sdstatus
     chown system system /sys/devices/platform/msm_hsusb/gadget/switchusb
     chown system system /sys/devices/platform/msm_hsusb/gadget/fixusb
-	 
-    # Boostpulse
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/down_differential
-    chmod 0666 /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-    chmod 0666 /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
-    chmod 0666 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-    chmod 0666 /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-    chmod 0666 /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-    chmod 0666 /sys/devices/system/cpu/cpufreq/ondemand/down_differential
-	
-    # Power-management
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 30000
-    write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 80
-    write /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy 1
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor 4
-    write /sys/devices/system/cpu/cpufreq/ondemand/down_differential 10
-    write /sys/module/lowmemorykiller/parameters/adj 0,1,2,4,9,12
-    write /proc/sys/vm/min_free_kbytes 8192
-    write /proc/sys/vm/dirty_expire_centisecs 200
-    write /proc/sys/vm/dirty_background_ratio  5
 
 on fs
     # mount mmc partitions
@@ -281,3 +255,8 @@ service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     group root
     oneshot
     disabled
+
+service gpu_dcvsd /system/bin/gpu_dcvsd
+    class late_start
+    user root
+    oneshot

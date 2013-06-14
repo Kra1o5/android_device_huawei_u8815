@@ -23,7 +23,6 @@ dalvik.vm.heapsize=96m
 dalvik.vm.heapstartsize=5m
 
 # Display
-debug.composition.type=mdp
 debug.hwc.dynThreshold=1.91
 debug.sf.swaprect=1
 persist.sys.use_dithering=2
@@ -54,6 +53,7 @@ sys.mem.max_hidden_apps=10
 # Qualcomm
 com.qc.hardware=true
 dev.pm.dyn_samplingrate=1
+dev.pm.dyn_sample_period=700000
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 # Telephony
