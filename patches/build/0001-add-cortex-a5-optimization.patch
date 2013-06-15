@@ -1,0 +1,25 @@
+From 0dc716d12c4973aad9e81ad1e9d14bee4bd22a33 Mon Sep 17 00:00:00 2001
+From: Kra1o5 <kra1o5x@gmail.com>
+Date: Sat, 15 Jun 2013 20:49:31 +0200
+Subject: [PATCH] add-cortex-a5-optimization
+
+---
+ core/combo/arch/arm/armv7-a-neon.mk | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/core/combo/arch/arm/armv7-a-neon.mk b/core/combo/arch/arm/armv7-a-neon.mk
+index e43ff61..b68a669 100644
+--- a/core/combo/arch/arm/armv7-a-neon.mk
++++ b/core/combo/arch/arm/armv7-a-neon.mk
+@@ -19,3 +19,8 @@ ARCH_ARM_HAVE_NEON_UNALIGNED_ACCESS    := true
+ ARCH_ARM_NEON_MEMSET_DIVIDER           := 132
+ ARCH_ARM_NEON_MEMCPY_ALIGNMENT_DIVIDER := 224
+ endif
++ifeq ($(TARGET_ARCH_VARIANT_CPU), cortex-a5)
++ARCH_ARM_HAVE_NEON_UNALIGNED_ACCESS    := true
++ARCH_ARM_NEON_MEMSET_DIVIDER           := 132
++ARCH_ARM_NEON_MEMCPY_ALIGNMENT_DIVIDER := 224
++endif
+-- 
+1.8.1.2
+
