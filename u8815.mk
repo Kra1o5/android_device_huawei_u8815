@@ -101,7 +101,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/huawei/u8815/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/huawei/u8815/prebuilt/system/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
-	device/huawei/u8815/prebuilt/system/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/huawei/u8815/prebuilt/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/huawei/u8815/prebuilt/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/huawei/u8815/prebuilt/system/etc/vold.fstab:system/etc/vold.fstab
